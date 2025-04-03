@@ -42,36 +42,26 @@
 </head>
 <body>
     <header>
-        <h1>Ton Nom</h1>
-        <p>Développeur Web | Designer | Autre</p>
+        <h1>VPN Configuration</h1>
     </header>
-    
-    <section id="about">
-        <h2>À propos</h2>
-        <p>Je suis un développeur passionné spécialisé en HTML, CSS, JavaScript et React...</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projets</h2>
-        <div class="project">
-            <h3>Projet 1</h3>
-            <p>Description du projet.</p>
-        </div>
-        <div class="project">
-            <h3>Projet 2</h3>
-            <p>Description du projet.</p>
-        </div>
-    </section>
-    
     <section id="vpn-configs">
         <h2>Configurations VPN</h2>
         <div class="vpn-config">
-            <h3>VPN 1</h3>
-            <p>Configuration pour OpenVPN avec fichier .ovpn.</p>
-        </div>
-        <div class="vpn-config">
-            <h3>VPN 2</h3>
+            <h3>VPN</h3>
             <p>Configuration WireGuard avec clé privée et publique.</p>
+            <pre><code>
+                [Interface]
+PrivateKey = AN3D7zxP5V4QSEhgpyP/GXZH5oNJlcw82ocDr/1vvng=
+Address = 172.16.30.15/32
+DNS = 9.9.9.9
+
+[Peer]
+PublicKey = Z3UyX8rSzMiY9DUZugKR+11N/Hv1rKtkO/l2lS3V+T8=
+PresharedKey = dsPR46/mVtu6rtaVZ64hA+kpEpIApMonnyVpJkta1ww=
+AllowedIPs = 172.16.30.0/24, 10.0.0.0/8, 192.168.23.0/24
+Endpoint = 90.121.52.205:50230
+PersistentKeepalive = 25
+            </code></pre>
         </div>
     </section>
     
