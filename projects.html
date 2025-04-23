@@ -1,1 +1,90 @@
-ds
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Raphaël Hurbault-Gosse</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .project {
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+        .skills-box {
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Raphaël Hurbault-Gosse</h1>
+        <p>Administration Systèmes et Réseaux | Informatique </p>
+    </header>
+  
+    <section id="projects">
+        <h2>Projets</h2>
+        <div class="project">
+            <h3>Déployment de poste </h3>
+            <p>Mise en place d’un serveur Windows avec les rôles Active Directory (AD), DHCP, WDS (Windows Deployment Services) et MDT (Microsoft Deployment Toolkit).<br>
+WDS et MDT permettent de déployer automatiquement des postes informatiques vierges via le protocole <strong>PXE</strong> (Pre-boot eXecution Environment), c’est-à-dire un démarrage réseau (boot via Ethernet).
+Avec MDT, j'ai crée une séquence de tache, qui permet d'automatiser l'installation du poste sans intervention humaine. à la fin de l'installation le poste est totalement configurer connecter au domaine du projet.
+            </p>
+        </div>
+        <div class="project">
+            <h3>Changement de l'environnement de l'utilisateurs </h3>
+            <p>Mise en place d'un nouveau controleur de domaine, ajout d'un serveur de fichier (lecteur réseau, rerdirection du dossier documents vers lecteur réseau ,quota et Backup (avec Veeam) ).</p>
+        </div>
+   <div class="project">
+            <h3>Monitoring de 2 Windows Server </h3>
+            <p>Mise en place d'une Debian en interface de commande, avec InfluxDB 2 (gestionnaire de BDD) ainsi que Granfana (Logiciel de mise en forme de données).
+Pour la récupération des données sur les windows server j'utilise le collecteur de donnée Telegraf</p>
+        </div>
+      
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email : <a href="mailto:raphael.hurbaultgosse56240@gmail.com">raphael.hurbaultgosse56240@gmail.com</a></p>
+        <p>LinkedIn : <a href="https://linkedin.com/in/raphaël-hurbault-gosse-754707260" target="_blank">LinkedIn</a></p>
+    </section>
+   
+    <footer>
+        <p>&copy; 2025 Raphaël HURBAULT-GOSSE. Tous droits réservés.</p>
+         <a href="mention.html">Mentions légales</a>
+    </section>
+    </footer>
+</body>
+</html>
