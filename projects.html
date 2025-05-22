@@ -65,7 +65,13 @@ Avec MDT, j'ai crée une séquence de tache, qui permet d'automatiser l'installa
         </div>
         <div class="project">
             <h3>Changement de l'environnement de l'utilisateurs </h3>
-            <p>Mise en place d'un nouveau controleur de domaine, ajout d'un serveur de fichier (lecteur réseau, rerdirection du dossier documents vers lecteur réseau ,quota et Backup (avec Veeam) ).</p>
+            <p>Mise en place d'un nouveau controleur de domaine, ajout d'un serveur de fichier (lecteur réseau, rerdirection du dossier documents vers lecteur réseau ,quota et Backup (avec Veeam) ).
+                Pour cela j'ai installer un serveur VMWare ESXi, Sur le quel j'ai installer un Windows Server 2019 que j'ai fait rejoindre au demain de l'entreprise. j'ai crée un UO de test ansi qu'un utilisateurs test afin de s'assurer
+                que tous fonctionne correctement. Pour nettoyer l'AD (enlever les comptes inactif depuis un certains temps.). Chaque utilisateur se voit son dossier "Documents" relier avec un dossier partager sur le serveur, qui est synchroniser 
+                toutes les connexions et déconnexions. plus si utilisateurs travail en dehors du réseaux de l'entreprise il a toujours les documents sur son pc, les dossiers se synchroniseront une fois re-connecter. 
+                Pour faire dossier utilisateurs pour chaque utilisateurs, il y a script qui s'éxécute a chaque debut de session qui regarde si il y a un dossier a se nom ou pas sinon il le crée et le fait remonter. 
+                Chaque utilisateur se voit attribuer à un quota de 10Go dans son dossier. 
+            </p>
         </div>
    <div class="project">
             <h3>Monitoring de 2 Windows Server </h3>
