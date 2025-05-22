@@ -57,22 +57,31 @@
     <section id="projects">
         <h2>Projets</h2>
         <div class="project">
-            <h3>Déployment de poste </h3>
-            <p>Mise en place d’un serveur Windows avec les rôles Active Directory (AD), DHCP, WDS (Windows Deployment Services) et MDT (Microsoft Deployment Toolkit).<br>
-WDS et MDT permettent de déployer automatiquement des postes informatiques vierges via le protocole <strong>PXE</strong> (Pre-boot eXecution Environment), c’est-à-dire un démarrage réseau (boot via Ethernet).
-Avec MDT, j'ai crée une séquence de tache, qui permet d'automatiser l'installation du poste sans intervention humaine. à la fin de l'installation le poste est totalement configurer connecter au domaine du projet.
-            </p>
-        </div>
-        <div class="project">
-            <h3>Changement de l'environnement de l'utilisateurs </h3>
-            <p>Mise en place d'un nouveau controleur de domaine, ajout d'un serveur de fichier (lecteur réseau, rerdirection du dossier documents vers lecteur réseau ,quota et Backup (avec Veeam) ).
-                Pour cela j'ai installer un serveur VMWare ESXi, Sur le quel j'ai installer un Windows Server 2019 que j'ai fait rejoindre au demain de l'entreprise. j'ai crée un UO de test ansi qu'un utilisateurs test afin de s'assurer
-                que tous fonctionne correctement. Pour nettoyer l'AD (enlever les comptes inactif depuis un certains temps.). Chaque utilisateur se voit son dossier "Documents" relier avec un dossier partager sur le serveur, qui est synchroniser 
-                toutes les connexions et déconnexions. plus si utilisateurs travail en dehors du réseaux de l'entreprise il a toujours les documents sur son pc, les dossiers se synchroniseront une fois re-connecter. 
-                Pour faire dossier utilisateurs pour chaque utilisateurs, il y a script qui s'éxécute a chaque debut de session qui regarde si il y a un dossier a se nom ou pas sinon il le crée et le fait remonter. 
-                Chaque utilisateur se voit attribuer à un quota de 10Go dans son dossier. 
-            </p>
-        </div>
+            <h3>1. Infrastructure Active Directory, serveur de fichiers et sauvegarde</h3>
+        <p>Mise en place d’un nouveau contrôleur de domaine avec ajout d’un serveur de fichiers et de la sauvegarde automatisée avec Veeam.</p>
+        <ul>
+            <li>Installation d’un hyperviseur VMWare ESXi</li>
+            <li>Déploiement d’un Windows Server 2019 intégré au domaine de l’entreprise</li>
+            <li>Création d’une unité d’organisation (OU) de test et d’un utilisateur test</li>
+            <li>Mise en place d’un partage réseau pour les dossiers "Documents" des utilisateurs</li>
+            <li>Redirection automatique du dossier "Documents" vers le serveur</li>
+            <li>Synchronisation des fichiers en ligne/hors-ligne (mode itinérant)</li>
+            <li>Quota de 10 Go par utilisateur appliqué sur leur dossier personnel</li>
+            <li>Script de session : création automatique du dossier utilisateur s’il n’existe pas</li>
+            <li>Nettoyage de l’Active Directory avec suppression des comptes inactifs</li>
+        </ul>
+    </div>
+       <div class="project">
+        <h3>2. Déploiement automatique de postes avec WDS/MDT</h3>
+        <p>Mise en place d’un serveur Windows avec les rôles AD, DHCP, WDS (Windows Deployment Services) et MDT (Microsoft Deployment Toolkit).</p>
+        <ul>
+            <li>Configuration du déploiement par le réseau via le protocole <strong>PXE</strong> (Pre-boot eXecution Environment)</li>
+            <li>Création d’une séquence de tâches avec MDT pour automatiser l’installation des postes</li>
+            <li>Déploiement sans intervention manuelle (mode Zero Touch)</li>
+            <li>Les postes déployés rejoignent automatiquement le domaine</li>
+            <li>Paramétrage post-installation complet (utilisateur, nom du poste, configuration réseau)</li>
+        </ul>
+    </div>
    <div class="project">
             <h3>Monitoring de 2 Windows Server </h3>
             <p>Mise en place d'une Debian en interface de commande, avec InfluxDB 2 (gestionnaire de BDD) ainsi que Granfana (Logiciel de mise en forme de données).
