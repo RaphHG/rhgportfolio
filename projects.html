@@ -89,14 +89,6 @@
         <li><strong>Base de données :</strong> InfluxDB utilisée comme moteur de stockage de séries temporelles</li>
         <li><strong>Visualisation :</strong> Grafana connecté à InfluxDB pour afficher les métriques en temps réel via des dashboards dynamiques</li>
         <li><strong>Collecte :</strong> Utilisation de Telegraf pour lire des fichiers de logs générés par des scripts PowerShell</li>
-        <li><strong>Scripts PowerShell :</strong> Création de scripts personnalisés exécutés périodiquement via le Planificateur de tâches Windows pour :
-            <ul>
-                <li>Vérifier l’état du service DHCP (baux attribués)</li>
-                <li>Lister les GPO appliquées sur les machines</li>
-                <li>Contrôler l’état des services WDS et MDT</li>
-                <li>Exporter les données dans des fichiers lisibles par Telegraf (format key=value)</li>
-            </ul>
-        </li>
         <li><strong>Architecture :</strong> Le système est hébergé sur une machine Debian avec 7 Go de RAM pour garantir la fluidité de Grafana et InfluxDB</li>
         <li><strong>Résultat :</strong> Visualisation en temps réel des services critiques, détection rapide des anomalies, amélioration de la réactivité de l'administrateur</li>
     </ul>
