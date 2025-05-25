@@ -69,59 +69,41 @@
 
     <section>
         <h2>Problématique</h2>
-        <p>Comment les nouveaux protocoles comme IPv6 et DNS-over-HTTPS améliorent-ils les réseaux tout en soulevant de nouveaux défis pour les administrateurs systèmes et réseaux ?</p>
+        <p>Comment répondre aux besoins croissants d'Internet tout en assurant la sécurtié et la confidentialité des communications réseau ?</p>
+        
+        <h2> Indroduction</h2>
+        <p>Le réseau Internet repose sur des protocoles fondamentaux comme l'adressage IP et le DNS. Cependant, avec l'explosion du nombre d'appareils connectés et les exigence croissantes en matière de cybersécurité, 
+        les protocoles traditionnels montrent leur limites. Cette veille se penche sur deux évolutions majeurs: IPV6, destiné à remplacer IPv4, et DNS-over-HTTPS (DoH), visant à sécuriser les requêtes DNS.</p>
+        
+    <h2> IPv6: Un nouveau standard d'adressage </h2>
+    <p> Le protocole IPv4, conçu en 1981, offre environ 4,3milliards d'adresses. Ce nombre s'est révélé insuffisant face à la croissance d'Internet. Pour pallier à cette pénurie, le protocole IPv6 à été publié en 1998</p>
+    <p>Caractéristiques principales:</p>
+        <li> Adressage sur 128 bits, soit 340 sextillions d'adresses soit 2^128 adresses. </li>
+        <li>Meilleure efficacité du routage>.</li>
+        <li> Auto-configuration des équipements.</li>
+        <li>Intégration native d'IPsec (sécurité).</li>
+    <p>Enjeux de déploiment:</p>
+        <li>Nécessité d'une double pile (IPv4/IPv6) pendant la transition.</li>
+        <li>Incompatibilités avec certains équipements ou logiciels anciens.</li>
+        <li>Migration progessive observée dans les FAI français (source: ARCEP 2024</li>
 
-        <h2>Contexte</h2>
-        <p>Les protocoles réseau évoluent pour répondre aux nouvelles exigences de sécurité, de performances et de capacité. Deux évolutions majeures sont actuellement au cœur des débats techniques :</p>
-        <ul>
-            <li>Le remplacement progressif d’IPv4 par IPv6</li>
-            <li>L’adoption de DNS-over-HTTPS (DoH)</li>
-        </ul>
-
-        <h2>1. IPv6 – Une réponse à la pénurie d’adresses IP</h2>
-        <ul>
-            <li>IPv4 : 4,3 milliards d’adresses, aujourd’hui saturées</li>
-            <li>IPv6 : 2^128 adresses possibles, soit un espace quasi illimité</li>
-        </ul>
-        <h3>Avantages</h3>
-        <ul>
-            <li>Auto-configuration des adresses IP</li>
-            <li>Routage plus efficace</li>
-            <li>Sécurité intégrée (IPsec)</li>
-        </ul>
-        <h3>Freins au déploiement</h3>
-        <ul>
-            <li>Infrastructures obsolètes</li>
-            <li>Méconnaissance technique</li>
-            <li>Nécessité de migration progressive (dual stack IPv4/IPv6)</li>
-        </ul>
-
-        <h2>2. DNS-over-HTTPS (DoH) – Protéger les requêtes DNS</h2>
-        <p>Objectif : chiffrer les requêtes DNS via HTTPS</p>
-        <h3>Avantages</h3>
-        <ul>
-            <li>Empêche l’interception (man-in-the-middle)</li>
-            <li>Améliore la confidentialité utilisateur</li>
-        </ul>
-        <h3>Limites</h3>
-        <ul>
-            <li>Complexifie le filtrage DNS (contrôle parental, sécurité réseau)</li>
-            <li>Moins de visibilité pour les administrateurs réseau</li>
-            <li>Centralisation excessive chez certains fournisseurs DNS</li>
-        </ul>
-
-        <h2>3. Enjeux pour l’administrateur réseau</h2>
-        <ul>
-            <li>Adapter l’infrastructure réseau à IPv6</li>
-            <li>Gérer la cohabitation IPv4/IPv6</li>
-            <li>Choisir une politique claire concernant DoH :</li>
-            <ul>
-                <li>Activer sur les postes clients ?</li>
-                <li>Bloquer via proxy ou pare-feu ?</li>
-            </ul>
-            <li>Mettre à jour la documentation réseau et les outils de supervision</li>
-        </ul>
-
+    <h2>DNS-over-HTTPS: Sécuriser les requêtes DNS</h2>
+        <p>Le DNS (Domain Name System) crée dans les années 1980, fonctionne en clair sur le port 53. Cela le rend vulnérable à l'interception ou à la falsification (ex: attaques Man-in-the-Middle).</p>
+        <p>Avantages:</p>
+        <li>Confidentialité des requêtes DNS.</li>
+        <li>Contournement de la censure DNS ou du filtrage réseau abusif.</li>
+        <li>intégration dans les navigateurs modern,se (Firefox, Chrome).</li>
+        <p>Limites:</p>
+        <li>Réduction du contrôle réseau pour les administrateurs.</li>
+        <li>Impact sur les politiques de sécurité d'entreprise (filtrage, journalisation).</li>
+        <li>DoH peut compliquer la détection réseau.</li>
+    <h2> Enjeux pour les technicien </h2>
+        <p>Ces évolutions impactent directement le travial d'un administrateurs système et réseau:</p>
+        <li>Savoir configurer une infrastructure compatible IPv6.</li>
+        <li>Adapter les poilitiques de sécurité au chiffrement DNS.</li>
+        <li>Sensibiliser les utilisateurs aux nouvelles pratiques.</li>
+        <p>La veille technologique sur IPv6 et DoH est donc essensitielle pour anticiper les changements d'architecture et garantir la sécurité des systèmes.</p>
+       
         <h2>Sources</h2>
         <ul>
             <li><a href="https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/">Cloudflare : DNS over HTTPS</a></li>
@@ -132,7 +114,8 @@
         </ul>
 
         <h2>Conclusion</h2>
-        <p>L’adoption d’IPv6 et de DoH illustre l’évolution continue des réseaux pour répondre à la croissance d’Internet et aux enjeux de sécurité. Pour les professionnels SISR, cela implique veille constante, formation continue et adaptation de l’architecture réseau.</p>
+        <p>L’adoption d’IPv6 et de DoH illustre l’évolution continue des réseaux pour répondre à la croissance d’Internet et aux enjeux de sécurité. Pour les professionnels SISR, cela implique veille constante, 
+            formation continue et adaptation de l’architecture réseau.</p>
     </section>
   <section id="contact">
         <h2>Contact</h2>
