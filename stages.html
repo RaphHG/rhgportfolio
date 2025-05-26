@@ -46,6 +46,18 @@
             background-color: #f9f9f9;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
+        body a {
+        color: #000000;
+    }
+
+    body a:visited {
+        color: #000000;           
+    }
+
+    body a:hover {
+        color: #5d5d5d;           
+        text-decoration: underline;
+    }
         footer a,
         footer a:visited {
             color: #ffffff;
@@ -65,15 +77,16 @@
   <section>
     <h2>Stages Juin/Juillet 2024</h2>
     <h3>DSDEN 56</h3>
-    <p>Projet réaliser : <strong>Déployment automatiser de poste informatiques via WDS et MDT</strong></stong></p>
-    <p>Durant le stage de première années j'ai eu l'occasion de travailler sur un projet qui est de déployer des postes informatiques via le rôle WDS (Windows Deployment Services) + la solution MDT (Microsoft Deployment toolkit).
-    le but étant que à la fin du projet on puisse déployer des machines sans intervention humaine,<br> tous cela est rendu possible avec les options de personalisation de MDT.</p> 
+    <p><a href="projects.html">Projet réaliser : <strong>Déployment automatiser de poste informatiques via WDS et MDT</strong></stong></p>
+    <p>Durant le stage de première années ,
+        j'ai eu l'occasion de travailler sur un projet qui est de déployer des postes informatiques via le rôle WDS (Windows Deployment Services) + la solution MDT (Microsoft Deployment toolkit).
+        le but étant que à la fin du projet on puisse déployer des machines sans intervention humaine,tous cela est rendu possible avec les options de personalisation de MDT.</p> 
     
     <p>J'ai du configurer un serveur HPE Proliant DL360 pour installer <strong>VMWare ESXi</strong>(Hyperviseur de type-1 ou natif, permet à plusieurs SE de fonctionner en parallèle), et d'y installer une MV de Windows Server 2019,
     sur ce Windows Server j'ai configurer les rôles d'AD, DHCP, WDS et MDT.</p>
     <li>Configuration du DHCP afin d'envoyer les options 66 et 67 (option PXE).</li>
     <li><a href="configztd.html">création d'une séquence de tâche avec MDT.</a></li>
-    <li></li>
+    
   <section id="contact">
         <h2>Contact</h2>
         <p>Email : <a href="mailto:raphael.hurbaultgosse56240@gmail.com">raphael.hurbaultgosse56240@gmail.com</a></p>
